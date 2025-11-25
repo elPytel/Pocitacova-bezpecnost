@@ -7,6 +7,9 @@ Bonusové úkoly pro pokročilé:
 - Darknet Diaries
 - [tryhackme](https://tryhackme.com/)
 
+Nedokumentované instrukce procesorů:
+- [GOD MODE UNLOCKED - Hardware Backdoors in x86 CPUs](https://www.youtube.com/watch?v=_eSAF_qT_FY)
+
 # Obsah
 - [Počítačová bezpečnost](#počítačová-bezpečnost)
 - [Obsah](#obsah)
@@ -78,17 +81,7 @@ Virtualizace a technologie Docker.
 Proč je Docker lepší než virtualizace?
 
 ### Internet a síťová bezpečnost
-IP adresy:
-- IPv4 vs IPv6
-- privátní vs veřejné
-
-- DNS servery
-
-porty:
-- NAT
-- firewally
-- aplikace
-- port forwarding
+![[Internet a síťová bezpečnost]]
 
 
 ## Kódování a Šifrování
