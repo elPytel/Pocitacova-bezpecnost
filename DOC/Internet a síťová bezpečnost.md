@@ -2,6 +2,7 @@
 
 - [Internet a síťová bezpečnost](#internet-a-síťová-bezpečnost)
   - [Z čeho se skládá Internet](#z-čeho-se-skládá-internet)
+    - [OSI model](#osi-model)
     - [HW](#hw)
       - [ISP](#isp)
     - [Protokoly](#protokoly)
@@ -18,6 +19,26 @@
 
 LAN, WAN, MAN, VPN
 
+MAC adresa vs IP adresa
+
+Porty aplikací
+
+packety:
+- hlavička
+- data
+- kontrolní součet
+
+### OSI model
+| Vrstva | Funkce | Technologie / příklady |
+|--------|--------|-----------------------|
+| 7 — Aplikační (Application) | Rozhraní pro aplikace, síťové služby (web, e‑mail, přenos souborů) | HTTP, HTTPS, FTP, SMTP, DNS, POP/IMAP |
+| 6 — Prezentace (Presentation) | Transformace dat, kódování, šifrování, komprese | SSL/TLS, MIME, JSON, XML |
+| 5 — Relační (Session) | Řízení relací, navazování/ukončení spojení, synchronizace | NetBIOS, RPC, SDP |
+| 4 — Transportní (Transport) | Spolehlivý/nespolehlivý přenos, segmentace, řízení toku | TCP, UDP, SCTP |
+| 3 — Síťová (Network) | Směrování paketů, logická adresace | IPv4, IPv6, Routery, L3 switch |
+| 2 — Linková (Data Link) | Rámcování, MAC adresování, detekce chyb, přístup k médiu | Ethernet, ARP, Switche, VLAN |
+| 1 — Fyzická (Physical) | Přenos bitů po médiu, elektrické/optické/radiové signály | Kabely (UTP, coax, fiber), konektory, Wi‑Fi, modemy |
+
 ### HW
 
 - Modem
@@ -25,6 +46,8 @@ LAN, WAN, MAN, VPN
 - Switch
 - Router
 - WiFi AP
+
+UTP vs STP kabely
 
 #### ISP
 Internet Service Provider (ISP) - poskytovatel internetu

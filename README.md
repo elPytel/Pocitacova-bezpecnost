@@ -20,10 +20,10 @@ Nedokumentované instrukce procesorů:
     - [Bootloader a bootování](#bootloader-a-bootování)
     - [OS](#os)
       - [Linux](#linux)
-    - [Internet a síťová bezpečnost](#internet-a-síťová-bezpečnost)
+  - [Internet a síťová bezpečnost](#internet-a-síťová-bezpečnost)
   - [Kódování a Šifrování](#kódování-a-šifrování)
-    - [Kódování](#kódování)
   - [Kibernetické útoky a jak se bránit](#kibernetické-útoky-a-jak-se-bránit)
+    - [Jak se bránit](#jak-se-bránit)
     - [Zálohování](#zálohování)
   - [Otázky a odpovědi](#otázky-a-odpovědi)
 
@@ -80,25 +80,11 @@ Instalace aplikací z ověřených zdrojů (repozitáře)
 Virtualizace a technologie Docker.
 Proč je Docker lepší než virtualizace?
 
-### Internet a síťová bezpečnost
+## Internet a síťová bezpečnost
 ![[Internet a síťová bezpečnost]]
 
-
 ## Kódování a Šifrování
-
-
-### Kódování
-
-Kód, kódová abeceda, kódové slovo.
-
-ASCII
-Morseova abeceda
-
-Caesarova šifra
-Transpoziční šifra
-
-Google colab - python, jupyter notebook
-Lámaná transpoziční šifry.
+![[Kódování a Šifrování]]
 
 
 ## Kibernetické útoky a jak se bránit
@@ -112,6 +98,40 @@ Jak se bránit při heckerském útoku?
 - ransomware - zálohy na externím disku
 
 Gumové kachničky
+
+Spoofing - vydávání se za někoho
+- IP, MAC, DNS, Pharming, Phishing
+
+keylogger
+- sw
+- hw
+
+Malware
+Grayware
+Adware, Spyware, 
+
+Virus:
+- Boot Sector Virus,
+- Program Virus
+- Script Virus
+- Macro Virus
+
+Trojan Horse
+
+DOS
+DDOS
+Botnet
+Rootkit
+
+DNS Poisoning
+
+Buffer Overflow
+
+### Jak se bránit
+
+Nepoužívat výchozí hesla
+
+least privilege
 
 ### Zálohování
 zálohování
