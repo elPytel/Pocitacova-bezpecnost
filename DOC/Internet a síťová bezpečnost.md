@@ -7,6 +7,7 @@
       - [ISP](#isp)
     - [Protokoly](#protokoly)
       - [IP (Internet Protocol)](#ip-internet-protocol)
+      - [NAT (Network Address Translation)](#nat-network-address-translation)
       - [DNS (Domain Name System)](#dns-domain-name-system)
       - [VPN](#vpn)
 
@@ -97,11 +98,40 @@ porty:
 - aplikace
 - port forwarding
 
+#### NAT (Network Address Translation)
+
+> [!tip]
+> NAT umožňuje více zařízením v lokální síti (s privátními IP adresami) sdílet jednu veřejnou IP adresu pro komunikaci s internetem.
+
+Řeší problém nedostatku veřejných IP adres tím, že překládá privátní IP adresy na jednu veřejnou IP adresu.
+
+Dále umožňuje skrytí vnitřní struktury sítě před vnějším světem, což zvyšuje bezpečnost.
+
+Můj počítač v lokální síti má IP privátní IP adresu, jsem přes AP (wifi) připojený k routeru, který má veřejnou IP adresu. Mohu se připojit na webový server na internetu. Pokud ale někdo z internetu chce přistoupit na můj počítač, tak nemůže, protože ten má privátní IP adresu. Router neví na který počítač v lokální síti má požadavek přeposlat (bez nastavení port-forwardingu).
+
+```mermaid
+graph LR
+  PC[Počítač s privátní IP]
+  Router[Router s veřejnou IP]
+  Internet[Internet]
+  Web[Web server]
+
+  PC -->|"1\. Požadavek na web"| Router
+  Router -->|"2\. Překlad na veřejnou IP"| Internet
+  Internet -->|"3\. Požadavek na web server"| Web
+  Web -->|"4\. Odpověď: HTML stránka"| Internet
+  Internet -->|"5\. Odpověď na veřejnou IP"| Router
+  Router -->|"6\. Překlad na privátní IP"| PC
+```
+
 #### DNS (Domain Name System)
 
 Jak probíhá připojení mobilu/počítače do internetu k serveru?
 AP, switch, router, modem -> routery -> DNS server -> routery -> WEB server 
 ![](https://www.webglobe.cz/wp-content/uploads/2024/05/1514-dns-clanok-iinfografika-tinyMCE-large-960x0-1.png)
+
+> [!note]
+> Je to stejné, jako když znáte jméno svého kamrádat, ale nevíte kde bydlí. Zeptáte se někoho (DNS serveru), kdo to ví, a on vám řekne adresu (IP adresu).
 
 Uživatel zadá do prohlížeče `www.seznam.cz`:
 
@@ -140,6 +170,9 @@ graph LR
 Web server nyní ví, že uživatel chce načíst stránku. Odpoví mu `HTML` kódem, který prohlížeč vykreslí.
 
 #### VPN
+
+VPN
+PPTP, IPsec, L2TP, SSL VPN
 
 Jak vypadá VPN?
 Kdy mě chrání?

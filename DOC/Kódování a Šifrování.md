@@ -5,6 +5,8 @@
   - [Šifrování](#šifrování)
     - [Symetrická šifra](#symetrická-šifra)
     - [Asymetrická šifra](#asymetrická-šifra)
+      - [Digitální podpis](#digitální-podpis)
+      - [Digitální certifikát](#digitální-certifikát)
 
 
 ## Kódování
@@ -32,12 +34,44 @@ Soukromý a veřejný klíč
 Šifrování a dešifrování je jednosměrné. Pokud něko použije můj veřejný klíč k zašifrování zprávy, pak jenom já s privátíním klíčem dovedu tu zprávu rozšifrovat. 
 Je jedno že více lidí zná veřejný klíč, jak je zpráva tímto klíčem jednou zašifrovaná, již nelze stejným klíče dešifrovat. 
 
-Digitální podpis
+#### Digitální podpis
 
 Spočítám Hash souboru a pak jej zašifruji svým soukromým klíčem. 
 
-Digitální certifikát
-CA - Certifikační autority
+```mermaid
+graph TD
+  I[Internet]
+  
+  subgraph Send[Odsílatel]
+    A[Soubor]
+    H[Hash funkce]
+    RSA[RSA + soukromý klíč]
+    S[Data + Digitální podpis]
+
+    A --> H
+    A --> S
+    H -->|"Spočítá Hash zprávy"| RSA
+    RSA -->|"Zašifruje Hash"| S
+  end
+  
+  S -->|"Odeslání zprávy"| I
+  I -->|"Přijetí zprávy"| R
+
+  subgraph Receive[Příjemce]
+    R[Data + Digitální podpis]
+    D[RSA + veřejný klíč]
+    HR[Hash funkce]
+    C[Porovnání Hashů]
+
+    R -->|"Digitální podpis"| D
+    R -->|"Data zprávy"| HR
+    D -->|"Dešifrování veřejným klíčem"| C
+    HR -->|"Spočítá Hash přijaté zprávy"| C
+  end
+```
+
+#### Digitální certifikát
+> [!tip] CA - Certifikační autority
 Podepisují že k danému veřejnému klíči náleží daný vlastník.
 
 Navázání na sítovou bezpečnost
