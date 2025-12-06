@@ -8,6 +8,9 @@
       - [Digitální podpis](#digitální-podpis)
       - [Digitální certifikát](#digitální-certifikát)
 
+Zdroje:
+- [hlavní pilíře počítačové bezpečnosti](https://cs.eitca.org/kybernetická-bezpečnost/eitc-je-základy-zabezpečení-počítačových-systémů-cssf/úvod-eitc-je-cssf-základy-bezpečnosti-počítačových-systémů/úvod-do-bezpečnosti-počítačových-systémů/jaké-jsou-hlavní-pilíře-počítačové-bezpečnosti/)
+- [bloková šifra](https://cs.eitca.org/kybernetická-bezpečnost/eitc-je-základem-klasické-kryptografie-ccf/aplikace-blokových-šifer/provozní-režimy-blokových-šifer/Co-by-měla-bloková-šifra-podle-Shannona-obsahovat/)
 
 ## Kódování
 
